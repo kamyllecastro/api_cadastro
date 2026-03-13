@@ -1,0 +1,10 @@
+[
+  {
+    "cpf": "12345678901",
+    "nome": "João Silva",
+    "idade": 30,
+    "endereco": "Rua das Flores, 123",
+    "bairro": "Centro",
+    "contato": "11999999999"
+  }
+]
