@@ -28,7 +28,7 @@ function lerClientes() {
 }
 
 function salvarClientes(clientes){
-   fs.whiteFileSync(clientesFile, JSON.stringify(clientes, null, 2), 'utf-8');
+   fs.writeFileSync(clientesFile, JSON.stringify(clientes, null, 2), 'utf-8');
 }
 
 app.post('/clientes', (req, res) => {
