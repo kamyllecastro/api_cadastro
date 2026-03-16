@@ -32,11 +32,13 @@ function salvarClientes(clientes){
 }
 
 app.post('/clientes', (req, res) => {
-    const { cpf, nome, idade, endereco, bairro, contato } = req.body;
-    
-    if (!cpf || !nome || !idade || !endereco || !bairro || !contato) {
-        return res.status(400).json({ error: 'Todos os campos são obrigatórios' });
-    }
+});
+
+app.get('/clientes', (req, res) => {
+    const cliente = lerClientes();
+    res.status(200).json(cliente);
+});
+  
 
 const cliente = lerClientes();
 
@@ -49,8 +51,6 @@ cliente.push(novoCliente);
 salvarClientes(cliente);
 
 res.status(201).json({ message: 'Cliente cadastrado com sucesso', cliente: novoCliente });
-
-});
 
 
 app.listen(port, () => {
